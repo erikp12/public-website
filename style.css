@@ -239,7 +239,7 @@ main {
 }
 
 .bio-image-container {
-  height: auto;
+  height: 100%;
 }
 
 .bio-image-wrapper {
@@ -253,7 +253,7 @@ main {
 
 .bio-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border: 1px solid var(--color-border);
   object-fit: cover;
