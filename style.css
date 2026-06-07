@@ -607,6 +607,9 @@ textarea.form-control {
   font-family: var(--font-body);
   font-size: 1rem;
   cursor: pointer;
+  width: fit-content;
+  margin: 1rem auto 0;
+  display: block;
 }
 
 .btn:hover {
