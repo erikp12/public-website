@@ -685,9 +685,9 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 850px) {
+@media (max-width: 1080) {
   .bio-grid {
-    grid-template-columns: 1.5fr;
+    grid-template-columns: 2fr;
     gap: 2.5rem;
   }
 
