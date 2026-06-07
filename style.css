@@ -680,12 +680,12 @@ footer {
 /* Responsive Styles */
 @media (max-width: 850px) {
   .bio-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.5fr;
     gap: 2.5rem;
   }
 
   .bio-image-wrapper {
-    max-width: 280px;
+    max-width: 380px;
     margin: 0 auto;
   }
 
