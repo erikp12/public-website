@@ -233,7 +233,7 @@ main {
 /* Bio Layout - Streamlined */
 .bio-grid {
   display: grid;
-  grid-template-columns: 1.8fr 2.2fr;
+  grid-template-columns: 2.5fr 2.2fr;
   gap: 3.5rem;
   align-items: center;
 }
