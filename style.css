@@ -238,11 +238,17 @@ main {
   align-items: start;
 }
 
+.bio-image-container {
+  height: 100%;
+}
+
 .bio-image-wrapper {
   border: 2px solid var(--color-border);
   padding: 6px;
   background-color: var(--bg-secondary);
   box-shadow: var(--glow-shadow);
+  aspect-ratio: 1 / 1;
+  width: 100%;
 }
 
 .bio-image {
@@ -250,7 +256,7 @@ main {
   height: auto;
   display: block;
   border: 1px solid var(--color-border);
-  /* Full color - removed CRT green filter! */
+  object-fit: cover;
 }
 
 .bio-content h1 {
