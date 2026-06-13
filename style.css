@@ -1,41 +1,39 @@
 /* ==========================================================================
-   Modern Monospace Terminal Academic Portfolio (Color Edition)
+   Modern Monospace Terminal Academic Portfolio (Research Lab Slate Edition)
    ========================================================================== */
 
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap');
-
 :root {
-  /* Terminal Color Palette (Obsidian / Dracula Inspired) */
-  --bg-primary: #0f111a;
-  /* Deep Obsidian Space Blue */
-  --bg-secondary: #181b28;
-  /* Sleek Slate-Navy Panel */
-  --text-primary: #cdd6f4;
-  /* Crisp Warm Off-White */
-  --text-secondary: #89b4fa;
-  /* Electric Cobalt / Light Blue */
-  --text-muted: #939ab7;
-  /* Muted Steel Gray */
-  --color-accent: #00e5ff;
-  /* Vivid Cyan Accent */
-  --color-highlight: #c084fc;
-  /* Soft Lavender */
-  --color-border: #2e354f;
-  /* Slate Navy Wire Border */
-  --color-border-active: #00e5ff;
+  /* Research Lab Slate Palette (Matte Dark Navy/Slate) */
+  --bg-primary: #0b0f19;
+  /* Matte Deep Slate Navy */
+  --bg-secondary: #161b26;
+  /* Premium Slate Panel */
+  --text-primary: #f8fafc;
+  /* Clean warm white (Slate 50) */
+  --text-secondary: #38bdf8;
+  /* Muted cyber blue (Sky 400) */
+  --text-muted: #94a3b8;
+  /* Highly readable body text (Slate 400) */
+  --color-accent: #00f5c4;
+  /* Vibrant cyber emerald / teal */
+  --color-highlight: #38bdf8;
+  /* Soft blue highlight */
+  --color-border: #1e293b;
+  /* Crisp Slate border (Slate 800) */
+  --color-border-active: #00f5c4;
 
   /* Typography */
-  --font-heading: 'VT323', monospace;
-  --font-body: 'Share Tech Mono', monospace;
+  --font-heading: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
   /* Spacing Scale */
   --max-width: 1000px;
   --header-height: 90px;
 
-  /* Modern Glow Effects */
-  --glow-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
-  --glow-text: 0 0 3px rgba(0, 229, 255, 0.4);
+  /* Premium Cyber Glow Effects */
+  --glow-shadow: 0 0 16px rgba(0, 245, 196, 0.08);
+  --glow-text: 0 0 4px rgba(0, 245, 196, 0.3);
 }
 
 /* Base Setup */
@@ -56,7 +54,7 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.03) 50%);
   z-index: 9999;
   background-size: 100% 4px;
   pointer-events: none;
@@ -66,8 +64,8 @@ html {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 16px; /* 16px is more standard and readable than 18px for body text */
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -105,23 +103,23 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: normal;
+  font-weight: 500;
   color: var(--color-accent);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
   text-shadow: var(--glow-text);
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   border: 1px dashed var(--color-border);
   padding: 0.5rem 1rem;
   margin-bottom: 1.5rem;
-  background-color: rgba(46, 53, 79, 0.15);
+  background-color: rgba(30, 41, 59, 0.25);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -129,11 +127,11 @@ h2 {
 
 h2::before {
   content: ">";
-  color: var(--color-highlight);
+  color: var(--color-accent);
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
@@ -147,12 +145,13 @@ a {
   color: var(--color-accent);
   text-decoration: none;
   border-bottom: 1px dashed var(--color-accent);
+  transition: all 0.2s ease;
 }
 
 a:hover {
-  background-color: var(--color-accent);
-  color: var(--bg-primary);
-  text-shadow: none;
+  background-color: rgba(0, 245, 196, 0.1);
+  color: var(--color-accent);
+  border-bottom-style: solid;
 }
 
 /* Header & Navigation */
@@ -174,7 +173,7 @@ header {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   color: var(--text-primary);
   border: none;
   display: block;
@@ -192,17 +191,18 @@ nav {
 }
 
 .nav-link {
-  font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
   color: var(--text-primary);
   padding: 0.4rem 1.2rem;
   border: 1px solid var(--color-border);
   background-color: var(--bg-primary);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-  background-color: rgba(0, 229, 255, 0.05);
+  background-color: rgba(0, 245, 196, 0.05);
   border-color: var(--color-accent);
 }
 
@@ -264,12 +264,13 @@ main {
 }
 
 .bio-content h1 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.2rem;
 }
 
 .bio-subtitle {
-  font-size: 1.35rem;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
   color: var(--color-highlight);
   margin-bottom: 1.5rem;
 }
@@ -299,13 +300,15 @@ main {
   border: 1px solid var(--color-border);
   color: var(--text-primary);
   padding: 0.3rem 1rem;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .filter-btn:hover {
   border-color: var(--color-accent);
+  background-color: rgba(0, 245, 196, 0.05);
 }
 
 .filter-btn.active {
@@ -313,6 +316,7 @@ main {
   color: var(--bg-primary);
   border-color: var(--color-accent);
   text-shadow: none;
+  font-weight: bold;
 }
 
 .pub-card {
@@ -320,6 +324,7 @@ main {
   background-color: var(--bg-secondary);
   padding: 1.75rem;
   margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
 }
 
 .pub-card:hover {
@@ -337,43 +342,46 @@ main {
 
 .pub-title {
   font-family: var(--font-body);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--text-primary);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .pub-type {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   border: 1px solid var(--color-border);
-  padding: 0.1rem 0.5rem;
+  padding: 0.15rem 0.5rem;
   color: var(--color-highlight);
   white-space: nowrap;
 }
 
 .pub-authors {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem;
+  color: var(--text-muted);
   margin-bottom: 0.25rem;
 }
 
 .pub-authors .me {
   text-decoration: underline;
   color: var(--color-accent);
+  font-weight: 500;
 }
 
 .pub-journal {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 0.75rem;
+  opacity: 0.8;
 }
 
 .pub-links {
   display: flex;
   gap: 1.5rem;
   margin-top: 1rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   flex-wrap: wrap;
+  font-family: var(--font-mono);
 }
 
 .pub-links a {
@@ -381,22 +389,24 @@ main {
 }
 
 .pub-links a:hover {
-  border-bottom-color: var(--bg-primary);
+  border-bottom-color: var(--color-accent);
 }
 
 .abstract-toggle {
   background: none;
   border: 1px dashed var(--color-border);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   padding: 0.25rem 0.75rem;
   cursor: pointer;
   margin-top: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .abstract-toggle:hover {
   border-color: var(--color-accent);
+  color: var(--text-primary);
 }
 
 .abstract-content {
@@ -443,7 +453,7 @@ main {
 }
 
 .cv-date {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   color: var(--color-highlight);
   font-weight: bold;
 }
@@ -464,8 +474,9 @@ main {
 }
 
 .cv-sub {
+  font-family: var(--font-mono);
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
 
@@ -522,7 +533,7 @@ main {
 }
 
 .contact-text h3 {
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: 1.1rem;
   color: var(--text-primary);
 }
@@ -540,9 +551,11 @@ main {
 }
 
 .social-icon {
+  font-family: var(--font-mono);
   border: 1px solid var(--color-border);
   padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
 }
 
 .social-icon:hover {
@@ -584,14 +597,15 @@ main {
   border: 1px solid var(--color-border);
   color: var(--text-primary);
   padding: 0.5rem 0.75rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
+  box-shadow: 0 0 8px rgba(0, 245, 196, 0.15);
 }
 
 textarea.form-control {
@@ -604,12 +618,13 @@ textarea.form-control {
   border: 1px solid var(--color-border);
   color: var(--text-primary);
   padding: 0.6rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
   cursor: pointer;
   width: fit-content;
   margin: 1rem auto 0;
   display: block;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
@@ -633,7 +648,7 @@ textarea.form-control {
 
 .form-status.success {
   display: block;
-  background-color: rgba(0, 229, 255, 0.1);
+  background-color: rgba(0, 245, 196, 0.05);
   color: var(--text-primary);
   border-color: var(--color-accent);
 }
@@ -692,7 +707,7 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 1080) {
+@media (max-width: 1080px) {
   .bio-grid {
     grid-template-columns: 2fr;
     gap: 2.5rem;
