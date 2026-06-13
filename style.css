@@ -48,7 +48,7 @@
 /* Faint Static Scanline Overlay (very subtle, no flicker) */
 body::after {
   content: " ";
-  display: block;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
