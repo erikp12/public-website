@@ -234,7 +234,7 @@ main {
 /* Bio Layout - Streamlined */
 .bio-grid {
   display: grid;
-  grid-template-columns: 2.5fr 2.2fr;
+  grid-template-columns: 1.8fr 2.2fr;
   gap: 3.5rem;
   align-items: center;
 }
@@ -714,14 +714,14 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 1080px) {
+@media (max-width: 1000px) {
   .bio-grid {
-    grid-template-columns: 1.8fr 2fr;
+    grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
   .bio-image-wrapper {
-    max-width: 380px;
+    max-width: 280px;
     margin: 0 auto;
   }
 
