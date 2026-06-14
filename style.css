@@ -236,7 +236,7 @@ main {
   display: grid;
   grid-template-columns: 1.8fr 2.2fr;
   gap: 3.5rem;
-  align-items: center;
+  align-items: start;
 }
 
 .bio-image-container {
@@ -267,7 +267,6 @@ main {
 .bio-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .bio-content h1 {
